@@ -1,0 +1,2 @@
+json.extract! credit_card, :id, :bank, :card_name, :desciption, :, :reward_point_per_unit, :travel, :shopping, :joining_fee, :annual_fee, :cashback, :created_at, :updated_at
+json.url credit_card_url(credit_card, format: :json)

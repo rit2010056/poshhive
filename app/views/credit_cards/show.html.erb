@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+<%if signed_in? and (current_user.email=='pushpendra2010056@gmail.com')%>
+  <p>
+    <strong>Bank:</strong>
+    <%= @credit_card.bank %>
+  </p>
+
+  <p>
+    <strong>Card name:</strong>
+    <%= @credit_card.card_name %>
+  </p>
+
+  <p>
+    <strong>Desciption:</strong>
+    <%= @credit_card.desciption %>
+  </p>
+
+  <p>
+    <strong>Travel:</strong>
+    <%= @credit_card.travel_reward %>
+  </p>
+
+  <p>
+    <strong>Shopping:</strong>
+    <%= @credit_card.shopping_reward %>
+  </p>
+
+  <p>
+    <strong>Joining fee:</strong>
+    <%= @credit_card.joining_fee %>
+  </p>
+
+  <p>
+    <strong>Annual fee:</strong>
+    <%= @credit_card.annual_fee %>
+  </p>
+
+  <p>
+    <strong>Cashback:</strong>
+    <%= @credit_card.cashback_reward %>
+  </p>
+
+  <p>
+    <strong>Fuel:</strong>
+    <%= @credit_card.fuel_reward %>
+  </p>
+
+  <p>
+    <strong>Is Lifestyle:</strong>
+    <%= @credit_card.is_lifestyle %>
+  </p>
+
+  <%= link_to 'Edit', edit_credit_card_path(@credit_card) %> |
+  <%= link_to 'Back', credit_cards_path %>
+<%end%>

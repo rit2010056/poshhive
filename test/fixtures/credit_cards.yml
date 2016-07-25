@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bank: MyText
+  card_name: MyText
+  desciption: MyString
+  : MyText
+  reward_point_per_unit: 1
+  travel: MyText
+  shopping: MyText
+  joining_fee: 1.5
+  annual_fee: 1.5
+  cashback: MyText
+
+two:
+  bank: MyText
+  card_name: MyText
+  desciption: MyString
+  : MyText
+  reward_point_per_unit: 1
+  travel: MyText
+  shopping: MyText
+  joining_fee: 1.5
+  annual_fee: 1.5
+  cashback: MyText

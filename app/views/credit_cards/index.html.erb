@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+<%if signed_in? and (current_user.email=='pushpendra2010056@gmail.com')%>
+<h1>Listing Credit Cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bank</th>
+      <th>Card name</th>
+      <th>Desciption</th>
+      <th>Travel Reward</th>
+      <th>Shopping Reward</th>
+      <th>Joining fee</th>
+      <th>Annual fee</th>
+      <th>Cashback Reward</th>
+      <th>Fuel Reward</th>
+      <th>Is Lifestyle Card</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @credit_cards.each do |credit_card| %>
+      <tr>
+        <td><%= credit_card.bank %></td>
+        <td><%= credit_card.card_name %></td>
+        <td><%= credit_card.desciption %></td>
+        <td><%= credit_card.travel_reward %></td>
+        <td><%= credit_card.shopping_reward %></td>
+        <td><%= credit_card.joining_fee %></td>
+        <td><%= credit_card.annual_fee %></td>
+        <td><%= credit_card.cashback_reward %></td>
+        <td><%= credit_card.fuel_reward %></td>
+        <td><%= credit_card.is_lifestyle %></td>
+        <td><%= link_to 'Show', credit_card %></td>
+        <td><%= link_to 'Edit', edit_credit_card_path(credit_card) %></td>
+        <td><%= link_to 'Destroy', credit_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+   
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Credit card', new_credit_card_path %>
+<% end %>
